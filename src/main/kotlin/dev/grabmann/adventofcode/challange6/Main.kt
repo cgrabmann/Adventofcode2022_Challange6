@@ -6,8 +6,8 @@ import kotlin.io.path.readLines
 fun main() {
     val file = Path("input.txt")
     val line = file.readLines().first()
-    val firstMarkerIndex =  line.windowed(4, step = 1, partialWindows = false) {
-        it.toSet().size == 4
+    val firstMarkerIndex =  line.windowed(14, step = 1, partialWindows = false) {
+        it.toSet().size == 14
     }.indexOfFirst { it }
-    println(4 + firstMarkerIndex)
+    println(14 + firstMarkerIndex)
 }
